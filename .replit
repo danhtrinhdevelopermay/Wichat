@@ -1,16 +1,15 @@
 entrypoint = "index.html"
-modules = ["web"]
+modules = ["web", "java-graalvm"]
 
 [nix]
 channel = "stable-24_11"
-packages = ["static-web-server"]
+packages = ["static-web-server", "unzip"]
 
 [deployment]
 publicDir = "/"
 deploymentTarget = "static"
 
 [workflows]
-runButton = "Serve static"
 
 [[workflows.workflow]]
 name = "Serve static"
@@ -27,6 +26,10 @@ waitForPort = 80
 
 [[ports]]
 localPort = 80
+externalPort = 80
+
+[[ports]]
+localPort = 5000
 externalPort = 80
 
 [agent]
