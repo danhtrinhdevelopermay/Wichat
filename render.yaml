@@ -1,0 +1,39 @@
+# Render Blueprint for Social Media Backend
+# This file allows Infrastructure-as-Code deployment
+
+services:
+  # Backend API Service
+  - type: web
+    name: social-media-backend
+    runtime: docker
+    plan: free
+    region: oregon # hoặc singapore cho châu Á
+    branch: main
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      # Database Configuration (CockroachDB)
+      - key: DATABASE_URL
+        sync: false # Bạn sẽ set manually hoặc qua Render dashboard
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      
+      # JWT Configuration
+      - key: JWT_SECRET
+        generateValue: true # Render tự động generate
+      - key: JWT_ISSUER
+        value: social-media-app
+      - key: JWT_REALM
+        value: social-media
+      
+      # Server Configuration
+      - key: PORT
+        value: 5000 # Render default là 10000, nhưng app của chúng ta dùng 5000
+
+# Nếu muốn dùng PostgreSQL của Render thay vì CockroachDB
+# databases:
+#   - name: social-media-db
+#     plan: free # Free tier: 1GB, expires in 30 days
+#     region: oregon # Phải cùng region với web service
