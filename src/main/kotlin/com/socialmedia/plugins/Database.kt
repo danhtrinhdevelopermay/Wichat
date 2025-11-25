@@ -13,12 +13,15 @@ fun Application.configureDatabase() {
     val dbUser = System.getenv("DB_USER") ?: "root"
     val dbPassword = System.getenv("DB_PASSWORD") ?: ""
     
-    // Add jdbc: prefix if not present
-    val jdbcUrl = if (dbUrl.startsWith("postgresql://")) {
+    // Add jdbc: prefix if not present and fix SSL mode
+    var jdbcUrl = if (dbUrl.startsWith("postgresql://")) {
         "jdbc:$dbUrl"
     } else {
         dbUrl
     }
+    
+    // Replace sslmode=verify-full with sslmode=require (doesn't need cert file)
+    jdbcUrl = jdbcUrl.replace("sslmode=verify-full", "sslmode=require")
     
     val config = HikariConfig().apply {
         this.jdbcUrl = jdbcUrl
