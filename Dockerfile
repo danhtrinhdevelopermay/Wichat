@@ -15,7 +15,7 @@ RUN gradle dependencies --no-daemon || return 0
 COPY --chown=gradle:gradle src ./src
 
 # Build fat JAR
-RUN gradle buildFatJar --no-daemon
+RUN gradle jar --no-daemon
 
 # Runtime stage
 FROM eclipse-temurin:17-jre-alpine

@@ -1,0 +1,50 @@
+2025-11-25T09:08:16.160676663Z #15 72.88 
+2025-11-25T09:08:16.160678743Z #15 72.88 BUILD SUCCESSFUL in 1m 12s
+2025-11-25T09:08:16.160680833Z #15 72.88 1 actionable task: 1 executed
+2025-11-25T09:08:16.354848579Z #15 DONE 73.2s
+2025-11-25T09:08:16.470147971Z 
+2025-11-25T09:08:16.470169941Z #16 [build 6/7] COPY --chown=gradle:gradle src ./src
+2025-11-25T09:08:16.470175391Z #16 DONE 0.1s
+2025-11-25T09:08:16.622019682Z 
+2025-11-25T09:08:16.622050392Z #17 [build 7/7] RUN gradle buildFatJar --no-daemon
+2025-11-25T09:08:17.251342937Z #17 0.780 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.5/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+2025-11-25T09:08:18.650502059Z #17 2.179 Daemon will be stopped at the end of the build 
+2025-11-25T09:08:24.893648129Z #17 8.419 
+2025-11-25T09:08:24.893685129Z #17 8.419 FAILURE: Build failed with an exception.
+2025-11-25T09:08:24.89370217Z #17 8.419 
+2025-11-25T09:08:24.89370626Z #17 8.419 * What went wrong:
+2025-11-25T09:08:24.89370985Z #17 8.419 Task 'buildFatJar' not found in root project 'social-media-backend'.
+2025-11-25T09:08:24.89371324Z #17 8.419 
+2025-11-25T09:08:24.89371634Z #17 8.419 * Try:
+2025-11-25T09:08:24.89371916Z #17 8.419 > Run gradle tasks to get a list of available tasks.
+2025-11-25T09:08:24.8937225Z #17 8.419 > For more on name expansion, please refer to https://docs.gradle.org/8.5/userguide/command_line_interface.html#sec:name_abbreviation in the Gradle documentation.
+2025-11-25T09:08:24.89372542Z #17 8.419 > Run with --stacktrace option to get the stack trace.
+2025-11-25T09:08:24.893728221Z #17 8.419 > Run with --info or --debug option to get more log output.
+2025-11-25T09:08:24.893731081Z #17 8.419 > Run with --scan to get full insights.
+2025-11-25T09:08:24.893733881Z #17 8.419 > Get more help at https://help.gradle.org.
+2025-11-25T09:08:24.893736681Z #17 8.419 
+2025-11-25T09:08:24.893739541Z #17 8.419 BUILD FAILED in 8s
+2025-11-25T09:08:25.292758659Z #17 ERROR: process "/bin/sh -c gradle buildFatJar --no-daemon" did not complete successfully: exit code: 1
+2025-11-25T09:08:25.353863494Z ------
+2025-11-25T09:08:25.353881405Z  > [build 7/7] RUN gradle buildFatJar --no-daemon:
+2025-11-25T09:08:25.353885665Z 8.419 
+2025-11-25T09:08:25.353889685Z 8.419 * Try:
+2025-11-25T09:08:25.353893585Z 8.419 > Run gradle tasks to get a list of available tasks.
+2025-11-25T09:08:25.353898155Z 8.419 > For more on name expansion, please refer to https://docs.gradle.org/8.5/userguide/command_line_interface.html#sec:name_abbreviation in the Gradle documentation.
+2025-11-25T09:08:25.353901715Z 8.419 > Run with --stacktrace option to get the stack trace.
+2025-11-25T09:08:25.353905935Z 8.419 > Run with --info or --debug option to get more log output.
+2025-11-25T09:08:25.353910435Z 8.419 > Run with --scan to get full insights.
+2025-11-25T09:08:25.353913875Z 8.419 > Get more help at https://help.gradle.org.
+2025-11-25T09:08:25.353917346Z 8.419 
+2025-11-25T09:08:25.353921306Z 8.419 BUILD FAILED in 8s
+2025-11-25T09:08:25.353924906Z ------
+2025-11-25T09:08:25.354681581Z Dockerfile:18
+2025-11-25T09:08:25.354693711Z --------------------
+2025-11-25T09:08:25.354696901Z   16 |     
+2025-11-25T09:08:25.354699871Z   17 |     # Build fat JAR
+2025-11-25T09:08:25.354702701Z   18 | >>> RUN gradle buildFatJar --no-daemon
+2025-11-25T09:08:25.354704771Z   19 |     
+2025-11-25T09:08:25.354707182Z   20 |     # Runtime stage
+2025-11-25T09:08:25.354709562Z --------------------
+2025-11-25T09:08:25.354712471Z error: failed to solve: process "/bin/sh -c gradle buildFatJar --no-daemon" did not complete successfully: exit code: 1
+2025-11-25T09:08:25.376573804Z error: exit status 1
