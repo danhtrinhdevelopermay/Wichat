@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 object RetrofitClient {
-    private const val BASE_URL = "https://your-api-url.repl.co/" // Thay đổi URL này
+    private const val BASE_URL = "https://wichat-backend.onrender.com/"
     
     private var authToken: String? = null
     

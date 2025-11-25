@@ -11,7 +11,7 @@ class WebSocketManager {
     private val gson = Gson()
     
     fun connect(userId: Int, username: String, onMessageReceived: (ChatMessage) -> Unit) {
-        val wsUrl = "wss://your-api-url.repl.co/ws/$userId/$username" // Thay đổi URL này
+        val wsUrl = "wss://wichat-backend.onrender.com/ws/$userId/$username"
         val request = Request.Builder()
             .url(wsUrl)
             .build()
