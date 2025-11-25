@@ -32,8 +32,8 @@ jobs:
           ${{ runner.os }}-gradle-
           
     - name: Grant execute permission for gradlew
-      run: chmod +x android/gradlew
-      working-directory: ./
+      run: chmod +x gradlew
+      working-directory: ./android
       
     - name: Build Debug APK
       run: ./gradlew assembleDebug --stacktrace
