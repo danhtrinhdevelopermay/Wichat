@@ -1,0 +1,100 @@
+2025-11-25T10:19:58.780127143Z 	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:693)
+2025-11-25T10:19:58.780137034Z 	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:203)
+2025-11-25T10:19:58.780150584Z 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258)
+2025-11-25T10:19:58.780164995Z 	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+2025-11-25T10:19:58.780237779Z 	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263)
+2025-11-25T10:19:58.780244659Z 	at org.postgresql.Driver.makeConnection(Driver.java:444)
+2025-11-25T10:19:58.780248039Z 	at org.postgresql.Driver.connect(Driver.java:297)
+2025-11-25T10:19:58.780290032Z 	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+2025-11-25T10:19:58.780310573Z 	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+2025-11-25T10:19:58.780327883Z 	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+2025-11-25T10:19:58.78045485Z 	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+2025-11-25T10:19:58.78045902Z 	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+2025-11-25T10:19:58.78046131Z 	... 28 more
+2025-11-25T10:20:00.18068173Z ==> Exited with status 1
+2025-11-25T10:20:00.367589402Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
+2025-11-25T10:20:03.872033739Z 10:20:03.869 [main] INFO  ktor.application - Autoreload is disabled because the development mode is off.
+2025-11-25T10:20:06.36973766Z 10:20:06.368 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-25T10:20:11.081062532Z Exception in thread "main" com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: FATAL: codeParamsRoutingFailed: missing cluster identifier
+2025-11-25T10:20:11.081086874Z   Hint: Ensure that your cluster identifier is uniquely specified using any of the
+2025-11-25T10:20:11.081089984Z following methods:
+2025-11-25T10:20:11.081091664Z 
+2025-11-25T10:20:11.081093454Z 1) Host name:
+2025-11-25T10:20:11.081095814Z    Use a driver that supports server name identification (SNI) with TLS 
+2025-11-25T10:20:11.081097634Z    connection and the hostname assigned to your cluster 
+2025-11-25T10:20:11.081100444Z    (e.g. serverless-101.5xj.gcp-us-central1.cockroachlabs.cloud)
+2025-11-25T10:20:11.081103094Z 
+2025-11-25T10:20:11.081105695Z 2) Options parameter:
+2025-11-25T10:20:11.081108464Z    Use "--cluster=<cluster identifier>" as the options parameter.
+2025-11-25T10:20:11.081112135Z    (e.g. options="--cluster=active-roach-42")
+2025-11-25T10:20:11.081114615Z 
+2025-11-25T10:20:11.081117305Z 3) Database parameter:
+2025-11-25T10:20:11.081120075Z    Use "<cluster identifier>.<database name>" as the database parameter.
+2025-11-25T10:20:11.081122915Z    (e.g. database="active-roach-42.defaultdb")
+2025-11-25T10:20:11.081125025Z 
+2025-11-25T10:20:11.081127725Z For more details, please visit our docs site at:
+2025-11-25T10:20:11.081130536Z 	https://www.cockroachlabs.com/docs/cockroachcloud/connect-to-a-serverless-cluster
+2025-11-25T10:20:11.081132776Z 
+2025-11-25T10:20:11.081531486Z 	at com.zaxxer.hikari.pool.HikariPool.throwPoolInitializationException(HikariPool.java:584)
+2025-11-25T10:20:11.081547527Z 	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:571)
+2025-11-25T10:20:11.081550867Z 	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+2025-11-25T10:20:11.081682734Z 	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:80)
+2025-11-25T10:20:11.081688815Z 	at com.socialmedia.plugins.DatabaseKt.configureDatabase(Database.kt:36)
+2025-11-25T10:20:11.081691695Z 	at com.socialmedia.ApplicationKt.module(Application.kt:15)
+2025-11-25T10:20:11.081696755Z 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+2025-11-25T10:20:11.081699515Z 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+2025-11-25T10:20:11.081702086Z 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+2025-11-25T10:20:11.081704506Z 	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+2025-11-25T10:20:11.081707116Z 	at kotlin.reflect.jvm.internal.calls.CallerImpl$Method.callMethod(CallerImpl.kt:97)
+2025-11-25T10:20:11.081709836Z 	at kotlin.reflect.jvm.internal.calls.CallerImpl$Method$Static.call(CallerImpl.kt:106)
+2025-11-25T10:20:11.081716946Z 	at kotlin.reflect.jvm.internal.KCallableImpl.callDefaultMethod$kotlin_reflection(KCallableImpl.kt:207)
+2025-11-25T10:20:11.081722707Z 	at kotlin.reflect.jvm.internal.KCallableImpl.callBy(KCallableImpl.kt:112)
+2025-11-25T10:20:11.08178898Z 	at io.ktor.server.engine.internal.CallableUtilsKt.callFunctionWithInjection(CallableUtils.kt:119)
+2025-11-25T10:20:11.08179294Z 	at io.ktor.server.engine.internal.CallableUtilsKt.executeModuleFunction(CallableUtils.kt:36)
+2025-11-25T10:20:11.081804251Z 	at io.ktor.server.engine.ApplicationEngineEnvironmentReloading$launchModuleByName$1.invoke(ApplicationEngineEnvironmentReloading.kt:332)
+2025-11-25T10:20:11.081844913Z 	at io.ktor.server.engine.ApplicationEngineEnvironmentReloading$launchModuleByName$1.invoke(ApplicationEngineEnvironmentReloading.kt:331)
+2025-11-25T10:20:11.081871274Z 	at io.ktor.server.engine.ApplicationEngineEnvironmentReloading.avoidingDoubleStartupFor(ApplicationEngineEnvironmentReloading.kt:356)
+2025-11-25T10:20:11.081900396Z 	at io.ktor.server.engine.ApplicationEngineEnvironmentReloading.launchModuleByName(ApplicationEngineEnvironmentReloading.kt:331)
+2025-11-25T10:20:11.081954959Z 	at io.ktor.server.engine.ApplicationEngineEnvironmentReloading.access$launchModuleByName(ApplicationEngineEnvironmentReloading.kt:32)
+2025-11-25T10:20:11.081974229Z 	at io.ktor.server.engine.ApplicationEngineEnvironmentReloading$instantiateAndConfigureApplication$1.invoke(ApplicationEngineEnvironmentReloading.kt:319)
+2025-11-25T10:20:11.082007781Z 	at io.ktor.server.engine.ApplicationEngineEnvironmentReloading$instantiateAndConfigureApplication$1.invoke(ApplicationEngineEnvironmentReloading.kt:310)
+2025-11-25T10:20:11.082034963Z 	at io.ktor.server.engine.ApplicationEngineEnvironmentReloading.avoidingDoubleStartup(ApplicationEngineEnvironmentReloading.kt:338)
+2025-11-25T10:20:11.082076475Z 	at io.ktor.server.engine.ApplicationEngineEnvironmentReloading.instantiateAndConfigureApplication(ApplicationEngineEnvironmentReloading.kt:310)
+2025-11-25T10:20:11.082089996Z 	at io.ktor.server.engine.ApplicationEngineEnvironmentReloading.createApplication(ApplicationEngineEnvironmentReloading.kt:150)
+2025-11-25T10:20:11.082130068Z 	at io.ktor.server.engine.ApplicationEngineEnvironmentReloading.start(ApplicationEngineEnvironmentReloading.kt:277)
+2025-11-25T10:20:11.082146869Z 	at io.ktor.server.netty.NettyApplicationEngine.start(NettyApplicationEngine.kt:216)
+2025-11-25T10:20:11.082200621Z 	at com.socialmedia.ApplicationKt.main(Application.kt:11)
+2025-11-25T10:20:11.082218552Z 	at com.socialmedia.ApplicationKt.main(Application.kt)
+2025-11-25T10:20:11.082468365Z Caused by: org.postgresql.util.PSQLException: FATAL: codeParamsRoutingFailed: missing cluster identifier
+2025-11-25T10:20:11.082473815Z   Hint: Ensure that your cluster identifier is uniquely specified using any of the
+2025-11-25T10:20:11.082477446Z following methods:
+2025-11-25T10:20:11.082479906Z 
+2025-11-25T10:20:11.082482766Z 1) Host name:
+2025-11-25T10:20:11.082485856Z    Use a driver that supports server name identification (SNI) with TLS 
+2025-11-25T10:20:11.082488676Z    connection and the hostname assigned to your cluster 
+2025-11-25T10:20:11.082491276Z    (e.g. serverless-101.5xj.gcp-us-central1.cockroachlabs.cloud)
+2025-11-25T10:20:11.082493847Z 
+2025-11-25T10:20:11.082496417Z 2) Options parameter:
+2025-11-25T10:20:11.082499297Z    Use "--cluster=<cluster identifier>" as the options parameter.
+2025-11-25T10:20:11.082502517Z    (e.g. options="--cluster=active-roach-42")
+2025-11-25T10:20:11.082504997Z 
+2025-11-25T10:20:11.082507487Z 3) Database parameter:
+2025-11-25T10:20:11.082510068Z    Use "<cluster identifier>.<database name>" as the database parameter.
+2025-11-25T10:20:11.082513008Z    (e.g. database="active-roach-42.defaultdb")
+2025-11-25T10:20:11.082515328Z 
+2025-11-25T10:20:11.082518198Z For more details, please visit our docs site at:
+2025-11-25T10:20:11.082520978Z 	https://www.cockroachlabs.com/docs/cockroachcloud/connect-to-a-serverless-cluster
+2025-11-25T10:20:11.082523508Z 
+2025-11-25T10:20:11.082526538Z 	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:693)
+2025-11-25T10:20:11.082539739Z 	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:203)
+2025-11-25T10:20:11.082545629Z 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258)
+2025-11-25T10:20:11.08255836Z 	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+2025-11-25T10:20:11.082597012Z 	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263)
+2025-11-25T10:20:11.082603352Z 	at org.postgresql.Driver.makeConnection(Driver.java:444)
+2025-11-25T10:20:11.082620153Z 	at org.postgresql.Driver.connect(Driver.java:297)
+2025-11-25T10:20:11.082666265Z 	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+2025-11-25T10:20:11.082681306Z 	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+2025-11-25T10:20:11.082715318Z 	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+2025-11-25T10:20:11.082723748Z 	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+2025-11-25T10:20:11.08276067Z 	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+2025-11-25T10:20:11.082764531Z 	... 28 more
