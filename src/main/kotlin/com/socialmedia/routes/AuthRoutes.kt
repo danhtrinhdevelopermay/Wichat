@@ -28,13 +28,13 @@ fun Route.authRoutes() {
                 return@post
             }
             
-            val passwordHash = BCrypt.hashpw(request.password, BCrypt.gensalt())
+            val hashedPassword = BCrypt.hashpw(request.password, BCrypt.gensalt())
             
             val userId = transaction {
                 Users.insert {
                     it[username] = request.username
                     it[email] = request.email
-                    it[passwordHash] = passwordHash
+                    it[passwordHash] = hashedPassword
                     it[displayName] = request.displayName
                 } get Users.id
             }

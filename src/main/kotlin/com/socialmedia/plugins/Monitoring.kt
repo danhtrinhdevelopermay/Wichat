@@ -1,7 +1,7 @@
 package com.socialmedia.plugins
 
 import io.ktor.server.application.*
-import io.ktor.server.plugins.calllogging.*
+import io.ktor.server.plugins.calllogging.CallLogging
 import io.ktor.server.request.*
 import org.slf4j.event.Level
 

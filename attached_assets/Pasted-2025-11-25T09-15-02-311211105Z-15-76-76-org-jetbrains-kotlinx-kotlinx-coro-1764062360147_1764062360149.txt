@@ -1,0 +1,100 @@
+2025-11-25T09:15:02.311211105Z #15 76.76 |         |         +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1 -> 1.7.3 (*)
+2025-11-25T09:15:02.311275136Z #15 76.76 |         |         \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.8.22 -> 1.9.22 (*)
+2025-11-25T09:15:02.311281046Z #15 76.76 |         \--- org.jetbrains.kotlinx:kotlinx-coroutines-debug:1.7.1 -> 1.7.3
+2025-11-25T09:15:02.311284627Z #15 76.76 |              +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3 (*)
+2025-11-25T09:15:02.311287796Z #15 76.76 |              +--- org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.7.3 (*)
+2025-11-25T09:15:02.311291497Z #15 76.76 |              +--- net.java.dev.jna:jna:5.9.0
+2025-11-25T09:15:02.311295667Z #15 76.76 |              +--- net.java.dev.jna:jna-platform:5.9.0
+2025-11-25T09:15:02.311378118Z #15 76.76 |              |    \--- net.java.dev.jna:jna:5.9.0
+2025-11-25T09:15:02.311384578Z #15 76.76 |              +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20 -> 1.8.22 (*)
+2025-11-25T09:15:02.311389849Z #15 76.76 |              +--- net.bytebuddy:byte-buddy:1.10.9
+2025-11-25T09:15:02.311395029Z #15 76.76 |              \--- net.bytebuddy:byte-buddy-agent:1.10.9
+2025-11-25T09:15:02.311400249Z #15 76.76 +--- org.jetbrains.kotlin:kotlin-test:1.9.22
+2025-11-25T09:15:02.311405359Z #15 76.76 |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.9.22 (*)
+2025-11-25T09:15:02.311410409Z #15 76.76 |    \--- org.jetbrains.kotlin:kotlin-test-junit:1.9.22
+2025-11-25T09:15:02.311415429Z #15 76.76 |         +--- org.jetbrains.kotlin:kotlin-test:1.9.22 (*)
+2025-11-25T09:15:02.311420899Z #15 76.76 |         \--- junit:junit:4.13.2 (*)
+2025-11-25T09:15:02.311426029Z #15 76.76 \--- org.jetbrains.kotlin:kotlin-test:1.9.22 (*)
+2025-11-25T09:15:02.311431329Z #15 76.76 
+2025-11-25T09:15:02.311436529Z #15 76.76 testRuntimeOnly - Runtime only dependencies for null/test. (n)
+2025-11-25T09:15:02.31144239Z #15 76.76 No dependencies
+2025-11-25T09:15:02.31144828Z #15 76.76 
+2025-11-25T09:15:02.31145402Z #15 76.76 (c) - A dependency constraint, not a dependency. The dependency affected by the constraint occurs elsewhere in the tree.
+2025-11-25T09:15:02.31147443Z #15 76.76 (*) - Indicates repeated occurrences of a transitive dependency subtree. Gradle expands transitive dependency subtrees only once per project; repeat occurrences only display the root of the subtree, followed by this annotation.
+2025-11-25T09:15:02.31147915Z #15 76.76 
+2025-11-25T09:15:02.31148337Z #15 76.76 (n) - A dependency or dependency configuration that cannot be resolved.
+2025-11-25T09:15:02.3114869Z #15 76.76 
+2025-11-25T09:15:02.31148965Z #15 76.76 A web-based, searchable dependency report is available by adding the --scan option.
+2025-11-25T09:15:02.311492371Z #15 76.86 
+2025-11-25T09:15:02.311495151Z #15 76.86 BUILD SUCCESSFUL in 1m 16s
+2025-11-25T09:15:02.311497851Z #15 76.86 1 actionable task: 1 executed
+2025-11-25T09:15:02.647167975Z #15 DONE 77.3s
+2025-11-25T09:15:02.887713762Z 
+2025-11-25T09:15:02.887726522Z #16 [build 6/7] COPY --chown=gradle:gradle src ./src
+2025-11-25T09:15:59.799903104Z #16 DONE 57.1s
+2025-11-25T09:15:59.954501442Z 
+2025-11-25T09:15:59.954537972Z #17 [build 7/7] RUN gradle jar --no-daemon
+2025-11-25T09:16:00.650745977Z #17 0.847 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.5/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+2025-11-25T09:16:02.237242183Z #17 2.433 Daemon will be stopped at the end of the build 
+2025-11-25T09:16:31.238386195Z #17 31.43 > Task :checkKotlinGradlePluginConfigurationErrors
+2025-11-25T09:16:43.536983321Z #17 43.73 > Task :processResources
+2025-11-25T09:16:59.437047435Z #17 59.63 
+2025-11-25T09:16:59.437076465Z #17 59.63 > Task :compileKotlin
+2025-11-25T09:16:59.602010932Z #17 59.65 e: file:///home/gradle/src/src/main/kotlin/com/socialmedia/plugins/Monitoring.kt:4:31 Unresolved reference: calllogging
+2025-11-25T09:16:59.602037492Z #17 59.65 e: file:///home/gradle/src/src/main/kotlin/com/socialmedia/plugins/Monitoring.kt:9:5 Not enough information to infer type variable B
+2025-11-25T09:16:59.602042762Z #17 59.65 e: file:///home/gradle/src/src/main/kotlin/com/socialmedia/plugins/Monitoring.kt:9:13 Unresolved reference: CallLogging
+2025-11-25T09:16:59.602048992Z #17 59.65 e: file:///home/gradle/src/src/main/kotlin/com/socialmedia/plugins/Monitoring.kt:10:9 Variable expected
+2025-11-25T09:16:59.602054802Z #17 59.65 e: file:///home/gradle/src/src/main/kotlin/com/socialmedia/plugins/Monitoring.kt:11:18 Cannot infer a type for this parameter. Please specify it explicitly.
+2025-11-25T09:16:59.602060362Z #17 59.65 e: file:///home/gradle/src/src/main/kotlin/com/socialmedia/plugins/Sockets.kt:38:9 Suspend function 'broadcastUserStatus' should be called only from a coroutine or another suspend function
+2025-11-25T09:16:59.602070033Z #17 59.65 e: file:///home/gradle/src/src/main/kotlin/com/socialmedia/plugins/Sockets.kt:43:13 Suspend function 'broadcastUserStatus' should be called only from a coroutine or another suspend function
+2025-11-25T09:16:59.602073013Z #17 59.65 e: file:///home/gradle/src/src/main/kotlin/com/socialmedia/routes/AuthRoutes.kt:37:21 None of the following functions can be called with the arguments supplied: 
+2025-11-25T09:16:59.602077313Z #17 59.65 public final fun <S, ID : EntityID<TypeVariable(S)>, E : Expression<TypeVariable(S)>> set(column: Column<TypeVariable(ID)>, value: TypeVariable(E)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+2025-11-25T09:16:59.602102623Z #17 59.65 public final fun <S : Comparable<TypeVariable(S)>, ID : EntityID<TypeVariable(S)>> set(column: Column<TypeVariable(ID)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+2025-11-25T09:16:59.602108314Z #17 59.65 public open fun <S> set(column: Column<TypeVariable(S)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+2025-11-25T09:16:59.602111314Z #17 59.65 public open fun <S> set(column: Column<TypeVariable(S)>, value: Query): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+2025-11-25T09:16:59.602124054Z #17 59.65 public open fun <T, S : TypeVariable(T), E : Expression<TypeVariable(S)>> set(column: Column<TypeVariable(T)>, value: TypeVariable(E)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+2025-11-25T09:16:59.602127184Z #17 59.65 public final fun <S : Comparable<TypeVariable(S)>> set(column: Column<EntityID<TypeVariable(S)>?>, value: TypeVariable(S)?): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+2025-11-25T09:16:59.602129964Z #17 59.65 public open fun <S> set(column: CompositeColumn<TypeVariable(S)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+2025-11-25T09:16:59.602132804Z #17 59.65 e: file:///home/gradle/src/src/main/kotlin/com/socialmedia/routes/AuthRoutes.kt:37:23 No set method providing array access
+2025-11-25T09:16:59.636681417Z #17 59.83 
+2025-11-25T09:16:59.737073605Z #17 59.83 > Task :compileKotlin FAILED
+2025-11-25T09:16:59.746297642Z #17 59.93 
+2025-11-25T09:16:59.88893345Z #17 59.93 FAILURE: Build failed with an exception.
+2025-11-25T09:16:59.90302366Z #17 59.93 
+2025-11-25T09:16:59.903038071Z #17 59.93 * What went wrong:
+2025-11-25T09:16:59.903043481Z #17 59.93 Execution failed for task ':compileKotlin'.
+2025-11-25T09:16:59.903050591Z #17 59.93 > A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+2025-11-25T09:16:59.903055301Z #17 59.93    > Compilation error. See log for more details
+2025-11-25T09:16:59.903059521Z #17 59.93 
+2025-11-25T09:16:59.903063751Z #17 59.93 * Try:
+2025-11-25T09:16:59.903067941Z #17 59.93 > Run with --stacktrace option to get the stack trace.
+2025-11-25T09:16:59.903073572Z #17 59.93 > Run with --info or --debug option to get more log output.
+2025-11-25T09:16:59.903077752Z #17 59.93 > Run with --scan to get full insights.
+2025-11-25T09:16:59.903125673Z #17 59.93 > Get more help at https://help.gradle.org.
+2025-11-25T09:16:59.903130922Z #17 59.93 
+2025-11-25T09:16:59.903134963Z #17 59.93 BUILD FAILED in 59s
+2025-11-25T09:16:59.903139463Z #17 59.93 3 actionable tasks: 3 executed
+2025-11-25T09:17:00.670565576Z #17 ERROR: process "/bin/sh -c gradle jar --no-daemon" did not complete successfully: exit code: 1
+2025-11-25T09:17:03.257600668Z ------
+2025-11-25T09:17:03.257620039Z  > [build 7/7] RUN gradle jar --no-daemon:
+2025-11-25T09:17:03.257624669Z 59.93    > Compilation error. See log for more details
+2025-11-25T09:17:03.257628119Z 59.93 
+2025-11-25T09:17:03.257631789Z 59.93 * Try:
+2025-11-25T09:17:03.257635189Z 59.93 > Run with --stacktrace option to get the stack trace.
+2025-11-25T09:17:03.257638899Z 59.93 > Run with --info or --debug option to get more log output.
+2025-11-25T09:17:03.257642279Z 59.93 > Run with --scan to get full insights.
+2025-11-25T09:17:03.257645629Z 59.93 > Get more help at https://help.gradle.org.
+2025-11-25T09:17:03.257649239Z 59.93 
+2025-11-25T09:17:03.257652969Z 59.93 BUILD FAILED in 59s
+2025-11-25T09:17:03.25765529Z 59.93 3 actionable tasks: 3 executed
+2025-11-25T09:17:03.257657519Z ------
+2025-11-25T09:17:03.25821752Z Dockerfile:18
+2025-11-25T09:17:03.258230241Z --------------------
+2025-11-25T09:17:03.258233881Z   16 |     
+2025-11-25T09:17:03.258236661Z   17 |     # Build fat JAR
+2025-11-25T09:17:03.258239391Z   18 | >>> RUN gradle jar --no-daemon
+2025-11-25T09:17:03.258242191Z   19 |     
+2025-11-25T09:17:03.258244791Z   20 |     # Runtime stage
+2025-11-25T09:17:03.258247331Z --------------------
+2025-11-25T09:17:03.258252291Z error: failed to solve: process "/bin/sh -c gradle jar --no-daemon" did not complete successfully: exit code: 1
+2025-11-25T09:17:08.142150446Z error: exit status 1

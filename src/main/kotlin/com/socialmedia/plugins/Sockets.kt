@@ -33,12 +33,12 @@ class Connection(val session: DefaultWebSocketSession, val userId: Int, val user
 object ChatManager {
     private val connections = ConcurrentHashMap<Int, Connection>()
     
-    fun addConnection(userId: Int, connection: Connection) {
+    suspend fun addConnection(userId: Int, connection: Connection) {
         connections[userId] = connection
         broadcastUserStatus(userId, connection.username, "online")
     }
     
-    fun removeConnection(userId: Int) {
+    suspend fun removeConnection(userId: Int) {
         connections.remove(userId)?.let {
             broadcastUserStatus(userId, it.username, "offline")
         }
