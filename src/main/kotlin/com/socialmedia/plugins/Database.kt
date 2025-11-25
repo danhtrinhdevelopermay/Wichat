@@ -13,8 +13,15 @@ fun Application.configureDatabase() {
     val dbUser = System.getenv("DB_USER") ?: "root"
     val dbPassword = System.getenv("DB_PASSWORD") ?: ""
     
+    // Add jdbc: prefix if not present
+    val jdbcUrl = if (dbUrl.startsWith("postgresql://")) {
+        "jdbc:$dbUrl"
+    } else {
+        dbUrl
+    }
+    
     val config = HikariConfig().apply {
-        jdbcUrl = dbUrl
+        this.jdbcUrl = jdbcUrl
         username = dbUser
         password = dbPassword
         driverClassName = "org.postgresql.Driver"
