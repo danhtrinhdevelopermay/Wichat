@@ -1,0 +1,50 @@
+2025-11-25T09:24:07.950990048Z #17 2.836 Daemon will be stopped at the end of the build 
+2025-11-25T09:24:21.354472339Z #17 16.24 > Task :checkKotlinGradlePluginConfigurationErrors
+2025-11-25T09:24:31.451029313Z #17 26.34 > Task :processResources
+2025-11-25T09:24:49.262953591Z #17 44.15 
+2025-11-25T09:24:49.262991633Z #17 44.15 > Task :compileKotlin FAILED
+2025-11-25T09:24:49.502351396Z #17 44.15 e: file:///home/gradle/src/src/main/kotlin/com/socialmedia/plugins/Monitoring.kt:4:31 Unresolved reference: calllogging
+2025-11-25T09:24:49.502369517Z #17 44.15 e: file:///home/gradle/src/src/main/kotlin/com/socialmedia/plugins/Monitoring.kt:9:5 Not enough information to infer type variable B
+2025-11-25T09:24:49.502374298Z #17 44.15 e: file:///home/gradle/src/src/main/kotlin/com/socialmedia/plugins/Monitoring.kt:9:13 Unresolved reference: CallLogging
+2025-11-25T09:24:49.502379608Z #17 44.15 e: file:///home/gradle/src/src/main/kotlin/com/socialmedia/plugins/Monitoring.kt:10:9 Variable expected
+2025-11-25T09:24:49.502385078Z #17 44.15 e: file:///home/gradle/src/src/main/kotlin/com/socialmedia/plugins/Monitoring.kt:11:18 Cannot infer a type for this parameter. Please specify it explicitly.
+2025-11-25T09:24:49.502388868Z #17 44.24 
+2025-11-25T09:24:49.502393259Z #17 44.24 FAILURE: Build failed with an exception.
+2025-11-25T09:24:49.502397139Z #17 44.24 
+2025-11-25T09:24:49.502401499Z #17 44.24 * What went wrong:
+2025-11-25T09:24:49.502405509Z #17 44.24 Execution failed for task ':compileKotlin'.
+2025-11-25T09:24:49.502444701Z #17 44.24 > A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+2025-11-25T09:24:49.502451111Z #17 44.24    > Compilation error. See log for more details
+2025-11-25T09:24:49.502454802Z #17 44.24 
+2025-11-25T09:24:49.502458502Z #17 44.24 * Try:
+2025-11-25T09:24:49.502462172Z #17 44.24 > Run with --stacktrace option to get the stack trace.
+2025-11-25T09:24:49.502467282Z #17 44.24 > Run with --info or --debug option to get more log output.
+2025-11-25T09:24:49.502471063Z #17 44.24 > Run with --scan to get full insights.
+2025-11-25T09:24:49.502474693Z #17 44.24 > Get more help at https://help.gradle.org.
+2025-11-25T09:24:49.502478303Z #17 44.24 
+2025-11-25T09:24:49.502493764Z #17 44.24 BUILD FAILED in 44s
+2025-11-25T09:24:49.502497144Z #17 44.24 3 actionable tasks: 3 executed
+2025-11-25T09:24:50.104877731Z #17 ERROR: process "/bin/sh -c gradle jar --no-daemon" did not complete successfully: exit code: 1
+2025-11-25T09:24:50.175364043Z ------
+2025-11-25T09:24:50.175390564Z  > [build 7/7] RUN gradle jar --no-daemon:
+2025-11-25T09:24:50.175404425Z 44.24    > Compilation error. See log for more details
+2025-11-25T09:24:50.175409385Z 44.24 
+2025-11-25T09:24:50.175412465Z 44.24 * Try:
+2025-11-25T09:24:50.175435127Z 44.24 > Run with --stacktrace option to get the stack trace.
+2025-11-25T09:24:50.175442907Z 44.24 > Run with --info or --debug option to get more log output.
+2025-11-25T09:24:50.175447357Z 44.24 > Run with --scan to get full insights.
+2025-11-25T09:24:50.175450387Z 44.24 > Get more help at https://help.gradle.org.
+2025-11-25T09:24:50.175453347Z 44.24 
+2025-11-25T09:24:50.175457008Z 44.24 BUILD FAILED in 44s
+2025-11-25T09:24:50.175476139Z 44.24 3 actionable tasks: 3 executed
+2025-11-25T09:24:50.175479409Z ------
+2025-11-25T09:24:50.176211487Z Dockerfile:18
+2025-11-25T09:24:50.176220878Z --------------------
+2025-11-25T09:24:50.176371056Z   16 |     
+2025-11-25T09:24:50.176376876Z   17 |     # Build fat JAR
+2025-11-25T09:24:50.176380136Z   18 | >>> RUN gradle jar --no-daemon
+2025-11-25T09:24:50.176385827Z   19 |     
+2025-11-25T09:24:50.176388697Z   20 |     # Runtime stage
+2025-11-25T09:24:50.176392127Z --------------------
+2025-11-25T09:24:50.176395477Z error: failed to solve: process "/bin/sh -c gradle jar --no-daemon" did not complete successfully: exit code: 1
+2025-11-25T09:24:50.199636941Z error: exit status 1
